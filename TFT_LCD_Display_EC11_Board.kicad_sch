@@ -6,9 +6,10 @@
 	(paper "A4")
 	(title_block
 		(title "TFT LCD Display EC11 ESP32 Board")
-		(date "2026-05-06")
-		(rev "r2.0")
+		(date "2026-05-16")
+		(rev "r2.1")
 		(company "by Willem Aandewiel")
+		(comment 1 "r2.1: new R11 (pullup ENABLE pin)")
 	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x04_Socket"
@@ -5876,7 +5877,7 @@
 		(uuid "962245dc-ac57-4779-baba-89ceb1783f22")
 	)
 	(rectangle
-		(start 93.98 110.49)
+		(start 87.63 110.49)
 		(end 169.545 187.96)
 		(stroke
 			(width 0)
@@ -5918,12 +5919,6 @@
 		(uuid "11e82532-54b8-45df-9908-aed34564ee36")
 	)
 	(junction
-		(at 110.49 147.32)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2276f37a-ca97-4662-ab93-b90106f5c21b")
-	)
-	(junction
 		(at 72.39 29.21)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5958,6 +5953,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5381cf5c-0769-41f4-8ad4-89351551a505")
+	)
+	(junction
+		(at 110.49 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5ae04910-ffcb-4456-aaea-ab9d3b7c5e75")
 	)
 	(junction
 		(at 116.84 69.85)
@@ -6264,6 +6265,16 @@
 			(type default)
 		)
 		(uuid "2acc4c9e-398f-4bbf-adb9-722b081ead77")
+	)
+	(wire
+		(pts
+			(xy 106.68 125.73) (xy 106.68 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bad4472-dc75-44c1-bbc4-ff11b4e3ecf8")
 	)
 	(wire
 		(pts
@@ -6867,7 +6878,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 151.13) (xy 110.49 151.13)
+			(xy 107.95 151.13) (xy 110.49 151.13)
 		)
 		(stroke
 			(width 0)
@@ -7575,7 +7586,7 @@
 	)
 	(global_label "3v3"
 		(shape input)
-		(at 101.6 151.13 180)
+		(at 100.33 151.13 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7585,7 +7596,7 @@
 		)
 		(uuid "6d936fa1-8d29-44df-ac7b-5af5f5416abd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 95.2282 151.13 0)
+			(at 93.9582 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8290,6 +8301,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "3v3"
+		(shape input)
+		(at 106.68 118.11 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dd1d1166-f898-4b79-9850-2f33697f5e5d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 106.68 111.7382 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -10168,6 +10203,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 106.68 121.92 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "44e7842e-437f-4c92-b2e7-ac88c0147cd7")
+		(property "Reference" "R11"
+			(at 104.648 122.428 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 108.712 121.92 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+			(at 108.458 121.92 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 106.68 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e9ff424c-3ecf-4e75-ae21-2335d87600bf")
+		)
+		(pin "2"
+			(uuid "10ff9072-bf91-4b06-8a1b-f15c766d8469")
+		)
+		(instances
+			(project "TFT_LCD_Display_EC11_Board"
+				(path "/3c59e70f-e9c5-4ef4-a932-269e9554ea5b"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x12_Socket")
 		(at 259.08 142.24 0)
 		(unit 1)
@@ -11553,7 +11667,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 105.41 151.13 270)
+		(at 104.14 151.13 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11563,7 +11677,7 @@
 		(dnp no)
 		(uuid "82ca4194-223d-4600-8395-8b3f37c25d57")
 		(property "Reference" "R6"
-			(at 105.918 153.162 90)
+			(at 104.648 153.162 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11573,7 +11687,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 105.41 149.098 90)
+			(at 104.14 149.098 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11583,7 +11697,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
-			(at 105.41 149.352 90)
+			(at 104.14 149.352 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11594,7 +11708,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 105.41 151.13 0)
+			(at 104.14 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11605,7 +11719,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 105.41 151.13 0)
+			(at 104.14 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
