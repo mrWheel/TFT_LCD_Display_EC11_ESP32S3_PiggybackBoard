@@ -3,3 +3,5 @@
 .history/
 _restore_backup/
 .DS_STORE
+freerouting.*
+
